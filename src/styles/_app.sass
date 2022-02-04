@@ -1,0 +1,48 @@
+/* app.sass */
+h1
+    color: white
+body
+    background-color: $color-background
+    font-family: 'Lato', Helvetica, Arial, sans-serif
+    color: $color-foreground
+    height: 100%
+.menu
+    display: flex
+    flex-direction: row
+    justify-content: center
+    margin-top: 1em
+    .menu-item
+        color: $color-foreground
+        text-decoration: none
+        cursor: pointer
+        display: flex
+        justify-items: center
+        align-items: center
+        margin: 0.5em 1em
+        padding: 0.5em 1em
+        border: 1px solid $color-foreground
+        border-radius: 0.2em
+        transition: all 0.5s
+        label, img
+            cursor: pointer
+            margin: 0 0.5em
+        img
+            filter: $filter-foreground
+        &:hover, &:active
+            color: $color-highlight
+            border-color: $color-highlight
+            transform: translateY(-3px)
+            box-shadow: 0 3px 3px $box-shadow-button
+            img
+                filter: $filter-highlight
+        &.active, &:focus
+            color: $color-highlight
+            border-color: $color-highlight
+            img
+                filter: $filter-highlight
+.page
+    display: flex
+    justify-content: center
+    img
+        margin: 0.8em
+        height: 3em
